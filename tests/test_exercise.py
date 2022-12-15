@@ -29,7 +29,7 @@ test_compute_mean()
 # integration test
 def test_main():
     tpl.main()
-    assert os.path.exist("plot_25")
+    assert os.path.exist("plot_25.png")
 #    assert os.path.exist("plot_28")
     
 
