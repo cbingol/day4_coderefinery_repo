@@ -2,8 +2,6 @@ import pandas as pd
 from matplotlib import pyplot as plt
 
 
-@pytest.mark.skip(reason="Test is bad") # there is a test here but ignore
-
 def compute_mean(data):
     """Compute the mean of a list of numbers
 
