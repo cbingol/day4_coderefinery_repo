@@ -16,7 +16,7 @@ permissions:
 jobs:
   tests: # we change this line to "tests"
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3 # this line download from github
