@@ -1,8 +1,7 @@
 import os
 import pytest
 import temperature_plotting as tpl
-import os
-import pytest
+
 
 # integration test
 def test_main():

@@ -17,19 +17,18 @@ def test_compute_mean():
     print(f"calc3 = {calc}")
     assert round(calc,4) == 3.3333, "Check that the average is roughly correct" # displays a message if an error
     
-    with pytest.raises(TypeError) as e: # asserts that this particular error type will occur
-        calc = tpl.compute_mean(["a", "b", "c"]) # this will fail, because the function does not work with strings
-    assert not e == None, "We should not be able to average strings"
+    #with pytest.raises(TypeError) as e: # asserts that this particular error type will occur
+    #    calc = tpl.compute_mean(["a", "b", "c"]) # this will fail, because the function does not work with strings
+    #assert not e == None, "We should not be able to average strings"
     
     # calc = tpl.compute_mean([])
     # assert calc == None # this failed in original function definition
     
 test_compute_mean()
 
-# integration test
+
 def test_main():
     tpl.main()
-    assert os.path.exist("plot_25.png")
-#    assert os.path.exist("plot_28")
-    
+    assert os.path.exists("plot_25.png")
+print("did it finish")
 
