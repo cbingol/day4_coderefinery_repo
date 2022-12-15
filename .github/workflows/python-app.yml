@@ -18,16 +18,17 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest, macos-latest, ubuntu-latest]
+        python-version: ['3.9', '3.10']
       fail-fast: false
 
     runs-on: ${{ matrix.os }} # here we changed so that it uses all "os" we defined
 
     steps:
     - uses: actions/checkout@v3 # this line download from github
-    - name: Set up Python 3.10
+    - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
       with:
-        python-version: "3.10"
+        python-version: ${{ matrix.python-version }} # special matrix with list of 2 python versions
     - name: Install dependencies
       shell: bash
       run: |
