@@ -15,8 +15,12 @@ permissions:
 
 jobs:
   tests: # we change this line to "tests"
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+      fail-fast: false
 
-    runs-on: windows-latest
+    runs-on: ${{ matrix.os }} # here we changed so that it uses all "os" we defined
 
     steps:
     - uses: actions/checkout@v3 # this line download from github
